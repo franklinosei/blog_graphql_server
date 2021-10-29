@@ -16,7 +16,7 @@ const resolvers = {
 
             client.connect()
 
-            const collection = client.db("test").collection("blogs");
+            const collection = client.db("BlogDB").collection("blogs");
 
             results = collection.find({}).toArray()
 
@@ -53,7 +53,7 @@ const resolvers = {
             }
 
             client.connect()
-            const collection = client.db("test").collection("blogs");
+            const collection = client.db("BlogDB").collection("blogs");
 
             collection.insertOne(blogObj)
 
@@ -67,7 +67,7 @@ const resolvers = {
             const { blogID, title, body } = args
 
             client.connect()
-            const collection = client.db("test").collection("blogs");
+            const collection = client.db("BlogDB").collection("blogs");
 
             filter = { blogID: blogID }
 
@@ -110,7 +110,7 @@ const resolvers = {
             }
 
             client.connect()
-            const collection = client.db("test").collection("blogs");
+            const collection = client.db("BlogDB").collection("blogs");
             try {
                 deleteResults = collection.deleteOne(doc)
                 return "Blog deleted successfully"
@@ -124,7 +124,7 @@ const resolvers = {
             const { blogID } = args
 
             client.connect()
-            const collection = client.db("test").collection("blogs");
+            const collection = client.db("BlogDB").collection("blogs");
 
             filter = { blogID: blogID }
 
@@ -152,7 +152,7 @@ const resolvers = {
             const { blogID } = args
 
             client.connect()
-            const collection = client.db("test").collection("blogs");
+            const collection = client.db("BlogDB").collection("blogs");
 
             filter = { blogID: blogID }
 
@@ -179,7 +179,7 @@ const resolvers = {
             const { blogID, comment, authorName, authorEmail } = args
 
             client.connect()
-            const collection = client.db("test").collection("blogs");
+            const collection = client.db("BlogDB").collection("blogs");
 
             filter = { blogID: blogID }
 
@@ -220,7 +220,7 @@ const resolvers = {
             }
 
             client.connect()
-            const collection = client.db("test").collection("blogs");
+            const collection = client.db("BlogDB").collection("blogs");
             try {
                 deleteResults = collection.deleteOne(doc)
                 return "Comment deleted successfully"
