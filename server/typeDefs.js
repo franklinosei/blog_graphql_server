@@ -2,10 +2,8 @@ const { gql } = require('apollo-server');
 
 
 const typeDefs = gql`
-scalar Date
 
 "A blog written by a user"
-
     type Blog {
         blogID: ID!
         title: String!
